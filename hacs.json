@@ -1,8 +1,8 @@
 {
-    "name": "Integration blueprint",
-    "filename": "integration_blueprint.zip",
+    "name": "Anomaly Detector",
+    "filename": "anomaly_detector.zip",
     "hide_default_branch": true,
-    "homeassistant": "2023.8.0",
+    "homeassistant": "2024.2.0",
     "render_readme": true,
-    "zip_release": true
+    "zip_release": true,
 }
