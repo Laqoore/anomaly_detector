@@ -1,6 +1,9 @@
 """Sensor platform for integration_blueprint."""
 from __future__ import annotations
 
+from collections import deque
+from statistics import mean, stdev
+
 from homeassistant.components.sensor import SensorEntity, SensorEntityDescription
 
 from .const import DOMAIN
