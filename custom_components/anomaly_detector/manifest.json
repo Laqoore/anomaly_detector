@@ -1,12 +1,12 @@
 {
-  "domain": "sensor",
+  "domain": "anomaly_detector_sensor",
   "name": "Anomaly Detector",
   "codeowners": [
     "@laqoore"
   ],
   "config_flow": true,
   "documentation": "https://github.com/Laqoore/anomaly_detector",
-  "iot_class": "cloud_polling",
+  "iot_class": "local_polling",
   "issue_tracker": "https://github.com/Laqoore/anomaly_detector/issues",
   "version": "0.0.1"
 }
