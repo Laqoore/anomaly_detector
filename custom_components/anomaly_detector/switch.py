@@ -5,7 +5,7 @@ from homeassistant.components.switch import SwitchEntity, SwitchEntityDescriptio
 
 from .const import DOMAIN
 from .coordinator import BlueprintDataUpdateCoordinator
-from .entity import IntegrationBlueprintEntity
+from .entity import AnomalyDetector
 
 ENTITY_DESCRIPTIONS = (
     SwitchEntityDescription(
@@ -28,7 +28,7 @@ async def async_setup_entry(hass, entry, async_add_devices):
     )
 
 
-class IntegrationBlueprintSwitch(IntegrationBlueprintEntity, SwitchEntity):
+class IntegrationBlueprintSwitch(AnomalyDetector, SwitchEntity):
     """integration_blueprint switch class."""
 
     def __init__(

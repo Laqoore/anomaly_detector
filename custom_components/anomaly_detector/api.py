@@ -24,7 +24,7 @@ class IntegrationBlueprintApiClientAuthenticationError(
     """Exception to indicate an authentication error."""
 
 
-class IntegrationBlueprintApiClient:
+class AnomalyDetectorApiClient:
     """Sample API Client."""
 
     def __init__(

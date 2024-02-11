@@ -5,12 +5,12 @@ from homeassistant.components.sensor import SensorEntity, SensorEntityDescriptio
 
 from .const import DOMAIN
 from .coordinator import BlueprintDataUpdateCoordinator
-from .entity import IntegrationBlueprintEntity
+from .entity import AnomalyDetector
 
 ENTITY_DESCRIPTIONS = (
     SensorEntityDescription(
-        key="integration_blueprint",
-        name="Integration Sensor",
+        key="anomaly_detector",
+        name="Anomaly Detector",
         icon="mdi:format-quote-close",
     ),
 )
@@ -20,7 +20,7 @@ async def async_setup_entry(hass, entry, async_add_devices):
     """Set up the sensor platform."""
     coordinator = hass.data[DOMAIN][entry.entry_id]
     async_add_devices(
-        IntegrationBlueprintSensor(
+        AnomalyDetectorSensor(
             coordinator=coordinator,
             entity_description=entity_description,
         )
@@ -28,7 +28,7 @@ async def async_setup_entry(hass, entry, async_add_devices):
     )
 
 
-class IntegrationBlueprintSensor(IntegrationBlueprintEntity, SensorEntity):
+class AnomalyDetectorSensor(AnomalyDetector, SensorEntity):
     """integration_blueprint Sensor class."""
 
     def __init__(

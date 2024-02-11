@@ -9,7 +9,7 @@ from homeassistant.components.binary_sensor import (
 
 from .const import DOMAIN
 from .coordinator import BlueprintDataUpdateCoordinator
-from .entity import IntegrationBlueprintEntity
+from .entity import AnomalyDetector
 
 ENTITY_DESCRIPTIONS = (
     BinarySensorEntityDescription(
@@ -32,7 +32,7 @@ async def async_setup_entry(hass, entry, async_add_devices):
     )
 
 
-class IntegrationBlueprintBinarySensor(IntegrationBlueprintEntity, BinarySensorEntity):
+class IntegrationBlueprintBinarySensor(AnomalyDetector, BinarySensorEntity):
     """integration_blueprint binary_sensor class."""
 
     def __init__(
