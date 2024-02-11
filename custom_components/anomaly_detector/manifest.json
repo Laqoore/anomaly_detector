@@ -1,5 +1,5 @@
 {
-  "domain": "anomaly_detector_sensor",
+  "domain": "anomaly_detector",
   "name": "Anomaly Detector",
   "codeowners": [
     "@laqoore"
